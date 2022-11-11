@@ -17,6 +17,7 @@ int lowLevel = 100;
 int middiumLevel2 = 60;
 int fullLevel = 30;
 int state1;
+int fullState = 0;
 int value;
 int addr = 1;
 
@@ -112,12 +113,16 @@ void loop() {
     delay(1000);
 
   }
-  /* if (waterDistance == fullLevel) {
-     digitalWrite(buzzerPin, HIGH);
-     delay(1000);
-     digitalWrite(buzzerPin, LOW);
-     delay(500);
-    }*/
+  if (fullState = o) {
+    if (waterDistance == fullLevel) {
+       fullState = 1;
+       digitalWrite(buzzerPin, HIGH);
+       delay(1000);
+       digitalWrite(buzzerPin, LOW);
+       delay(500);
+    }
+  }
+ 
 
   if (state1 == 1) {
     digitalWrite(relayPin, HIGH);
